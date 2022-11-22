@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Photoshop</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>10</y>
+      <width>571</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Image</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionUndo"/>
+   </widget>
+   <widget class="QMenu" name="menuPicxel_Processing">
+    <property name="title">
+     <string>Picxel Processing</string>
+    </property>
+    <addaction name="actionAdd"/>
+    <addaction name="actionSubtract"/>
+    <addaction name="actionMultiplication"/>
+   </widget>
+   <widget class="QMenu" name="menuBit_Processing">
+    <property name="title">
+     <string>Bit Processing</string>
+    </property>
+    <addaction name="actionAND"/>
+    <addaction name="actionOR"/>
+    <addaction name="actionNOT"/>
+   </widget>
+   <widget class="QMenu" name="menuFiltering">
+    <property name="title">
+     <string>Filtering</string>
+    </property>
+    <addaction name="actionMean_Filtering"/>
+    <addaction name="actionMedian_Filtering"/>
+    <addaction name="actionGaussian_Filtering"/>
+    <addaction name="actionConservative_Smoothing"/>
+    <addaction name="actionUnsharp_Filtering"/>
+   </widget>
+   <widget class="QMenu" name="menuEdge_Detect">
+    <property name="title">
+     <string>Edge Detect</string>
+    </property>
+    <addaction name="actionRoberts_cross_edge"/>
+    <addaction name="actionSobel_edge"/>
+    <addaction name="actionPrewitt_edge"/>
+    <addaction name="actionCanny_edge"/>
+    <addaction name="actionLaplacian_edge"/>
+    <addaction name="actionLaplacian_of_Gaussian_edge"/>
+   </widget>
+   <widget class="QMenu" name="menuMorphology">
+    <property name="title">
+     <string>Morphology</string>
+    </property>
+    <addaction name="actionDilation"/>
+    <addaction name="actionErosion"/>
+    <addaction name="actionOpening"/>
+    <addaction name="actionClosing"/>
+   </widget>
+   <widget class="QMenu" name="menuRotate">
+    <property name="title">
+     <string>Rotate</string>
+    </property>
+    <addaction name="actionClockwise_90"/>
+    <addaction name="actionCounter_Clockwise_90"/>
+    <addaction name="action180_deg"/>
+    <addaction name="actionHorizontal_Flip"/>
+    <addaction name="actionVertical_Flip"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuRotate"/>
+   <addaction name="menuPicxel_Processing"/>
+   <addaction name="menuBit_Processing"/>
+   <addaction name="menuFiltering"/>
+   <addaction name="menuEdge_Detect"/>
+   <addaction name="menuMorphology"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAdd">
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionDilation">
+   <property name="text">
+    <string>Dilation</string>
+   </property>
+  </action>
+  <action name="actionErosion">
+   <property name="text">
+    <string>Erosion</string>
+   </property>
+  </action>
+  <action name="actionOpening">
+   <property name="text">
+    <string>Opening</string>
+   </property>
+  </action>
+  <action name="actionClosing">
+   <property name="text">
+    <string>Closing</string>
+   </property>
+  </action>
+  <action name="actionRoberts_cross_edge">
+   <property name="text">
+    <string>Roberts cross edge</string>
+   </property>
+  </action>
+  <action name="actionSobel_edge">
+   <property name="text">
+    <string>Sobel edge</string>
+   </property>
+  </action>
+  <action name="actionPrewitt_edge">
+   <property name="text">
+    <string>Prewitt edge</string>
+   </property>
+  </action>
+  <action name="actionCanny_edge">
+   <property name="text">
+    <string>Canny edge</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_edge">
+   <property name="text">
+    <string>Laplacian edge</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_of_Gaussian_edge">
+   <property name="text">
+    <string>Laplacian of Gaussian edge</string>
+   </property>
+  </action>
+  <action name="actionMean_Filtering">
+   <property name="text">
+    <string>Mean Filtering</string>
+   </property>
+  </action>
+  <action name="actionMedian_Filtering">
+   <property name="text">
+    <string>Median Filtering</string>
+   </property>
+  </action>
+  <action name="actionGaussian_Filtering">
+   <property name="text">
+    <string>Gaussian Filtering</string>
+   </property>
+  </action>
+  <action name="actionConservative_Smoothing">
+   <property name="text">
+    <string>Conservative Smoothing</string>
+   </property>
+  </action>
+  <action name="actionUnsharp_Filtering">
+   <property name="text">
+    <string>Unsharp Filtering</string>
+   </property>
+  </action>
+  <action name="actionSubtract">
+   <property name="text">
+    <string>Subtract</string>
+   </property>
+  </action>
+  <action name="actionMultiplication">
+   <property name="text">
+    <string>Multiplication</string>
+   </property>
+  </action>
+  <action name="actionAND">
+   <property name="text">
+    <string>AND</string>
+   </property>
+  </action>
+  <action name="actionOR">
+   <property name="text">
+    <string>OR</string>
+   </property>
+  </action>
+  <action name="actionNOT">
+   <property name="text">
+    <string>NOT(Complement)</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionClockwise_90">
+   <property name="text">
+    <string>90 deg (Clockwise)</string>
+   </property>
+  </action>
+  <action name="actionCounter_Clockwise_90">
+   <property name="text">
+    <string>90 deg (Counter-Clockwise)</string>
+   </property>
+  </action>
+  <action name="action180_deg">
+   <property name="text">
+    <string>180 deg</string>
+   </property>
+  </action>
+  <action name="actionHorizontal_Flip">
+   <property name="text">
+    <string>Horizontal Flip</string>
+   </property>
+  </action>
+  <action name="actionVertical_Flip">
+   <property name="text">
+    <string>Vertical Flip</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
